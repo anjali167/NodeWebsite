@@ -19,9 +19,7 @@ const getInfo = async(event) => {
         try{
            
 
-            let url = `http://api.weatherstack.com/current
-    ? access_key = 597ef596b753f86232d1243b9b4d54a7
-    & query = ${cityVal}`;
+            let url = `http://api.openweathermap.org/data/2.5/weather?q=${cityVal}&units=metric&appid=78431b81bae87f937c1cffc472189580`;
             const response = await fetch(url);
 
             const data = await response.json();
